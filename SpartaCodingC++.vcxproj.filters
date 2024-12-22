@@ -16,10 +16,27 @@
     <Filter Include="Source Files\Main">
       <UniqueIdentifier>{e7e8165c-ddab-46a2-8759-e6070d50cfae}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Day6">
+      <UniqueIdentifier>{d3d878f6-0fa0-4d88-9a0b-79031a034874}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\main.cpp">
       <Filter>Source Files\Main</Filter>
     </ClCompile>
+    <ClCompile Include="Src\HW_01_SimpleProgramming\HW_01_SimpleProgramming.cpp">
+      <Filter>Source Files\Day6</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\HW_01_SimpleProgramming\HW_01_SimpleProgramming.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Common\CommonFunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
