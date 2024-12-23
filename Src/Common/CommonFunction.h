@@ -1,12 +1,15 @@
 ﻿#pragma once
 #include <iostream>
 #include <vector>
+#include <windows.h>
 
 constexpr int InitialIntValue = INT_MIN;
 constexpr bool SUCCESS = true;
 constexpr bool FAIL = false;
 constexpr int ASCENDING = 1;
 constexpr int DESCENDING = 2;
+constexpr int CONTINUE = 1;
+constexpr int EXIT = 0;
 
 
 FORCEINLINE void ClearCMD ( )

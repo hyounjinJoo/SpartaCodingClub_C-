@@ -27,12 +27,18 @@
     <ClCompile Include="Src\HW_01_SimpleProgramming\HW_01_SimpleProgramming.cpp">
       <Filter>Source Files\Day6</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Lecture\Chapter1-1HW.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\HW_01_SimpleProgramming\HW_01_SimpleProgramming.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Src\Common\CommonFunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Lecture\Chapter1-1HW.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -53,15 +53,15 @@ int PrintSelectInsertionSortOrdering()
 }
 
 // 필수 기능
-void EssentialFunction(int OutArray[], const int InArraySize )
+void EssentialFunction(int OutArray[], const int InArraySize)
 {
-	InputNumbersAndSaveToArray ( OutArray , InArraySize );
+	InputNumbersAndSaveToArray(OutArray, InArraySize);
 	PrintSumAndAverageValue(OutArray, InArraySize);
 	HW_01::Delay(3);
 }
 
 // 도전 기능
-void ChallengeFunction(int OutArray[], const int InArraySize )
+void ChallengeFunction(int OutArray[], const int InArraySize)
 {
 	int OrderingType = PrintSelectInsertionSortOrdering();
 	HW_01::Delay(2);
@@ -69,7 +69,7 @@ void ChallengeFunction(int OutArray[], const int InArraySize )
 	Print("[정렬 전 상태]"); PrintENDLs();
 	PrintArray(OutArray, InArraySize); PrintENDLs();
 
-	InsertionSort(OutArray, InArraySize , OrderingType);
+	InsertionSort(OutArray, InArraySize, OrderingType);
 
 	Print("[정렬 수행 결과]"); PrintENDLs();
 	PrintArray(OutArray, InArraySize);
@@ -94,9 +94,9 @@ void RepeatChallengeFunction(int OutArray[], const int InArraySize)
 
 int SimpleProgrammingMain()
 {
-	int ArraySize = GetHowManyInputNumbers ( );
-	int* Numbers = CreateArray<int> ( ArraySize );
-	HW_01::Delay ( 3 );
+	int ArraySize = GetHowManyInputNumbers();
+	int* Numbers = CreateArray<int>(ArraySize);
+	HW_01::Delay(3);
 	EssentialFunction(Numbers, ArraySize);
 	RepeatChallengeFunction(Numbers, ArraySize);
 
