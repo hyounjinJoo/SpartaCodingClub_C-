@@ -31,3 +31,18 @@ public:
         cout << "값: " << *ptr << endl;
     }
 };
+
+class Logger
+{
+public:
+    Logger() : logCount(0) {};
+    ~Logger();
+
+    void logInfo(const std::string& message);
+    void logWarning(const std::string& message);
+    void logError(const std::string& message);
+    void showTotalLogs();
+
+private:
+    int logCount;
+};
