@@ -2,7 +2,7 @@
 
 #include "Chapter1_2HW.h"
 
-int Run()
+int RunHW01()
 {
 	Battery NewBattery;
 	Print("Initial charge: ", false);
@@ -16,9 +16,20 @@ int Run()
 	return 0;
 }
 
+int RunHW02()
+{
+	Fraction f1(1, 2);
+	Fraction f2(3, 4);
+
+	f1.multiply(f2).display();
+
+	return 0;
+}
+
 int Chapter1_2HWMain()
 {
-	int Result = Run();
+	//int Result = RunHW01();
+	int Result = RunHW02();
 
 	return Result;
 }
@@ -62,4 +73,50 @@ void Battery::PrintCurrentCharge(bool bNeedENDL) const
 	{
 		std::cout << "\n";
 	}
+}
+
+Fraction::Fraction(int num, int denom)
+	: numerator(num)
+	, denominator(denom)
+{
+}
+
+int Fraction::gcd(int a, int b)
+{
+	while(b != 0)
+	{
+		int temp = b;
+		b = a % b;
+		a = temp;
+	}
+
+	return a;
+}
+
+void Fraction::simplify()
+{
+	int GCD = gcd(denominator, numerator);
+	if(1 != GCD)
+	{
+		denominator /= GCD;
+		numerator /= GCD;
+	}
+}
+
+Fraction Fraction::multiply(const Fraction& fraction)
+{
+	Fraction newFraction;
+	newFraction.setDenominator(denominator * fraction.getDenominator());
+	newFraction.setNumerator(numerator * fraction.getNumerator());
+
+	newFraction.simplify();
+
+	return newFraction;
+}
+
+void Fraction::display()
+{
+	Print("출력:");
+	Print("곱한 결과: ", false);
+	std::cout << numerator << "/" << denominator << "\n";
 }

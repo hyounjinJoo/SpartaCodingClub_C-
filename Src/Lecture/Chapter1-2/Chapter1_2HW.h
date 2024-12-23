@@ -1,7 +1,8 @@
 ﻿#pragma once
 
 int Chapter1_2HWMain();
-int Run();
+int RunHW01();
+int RunHW02();
 
 class Battery
 {
@@ -25,4 +26,28 @@ private:
 	int charge;
 	int usingCost;
 	int chargingPower;
+};
+
+class Fraction
+{
+public:
+	Fraction() : numerator(0), denominator(1) {}
+	Fraction(int num, int denom);
+	virtual ~Fraction() {};
+
+public:
+	int gcd(int a, int b);
+	void simplify();
+	Fraction multiply(const Fraction& fraction);
+	void display();
+
+	int getNumerator() const { return numerator; }
+	int getDenominator() const { return denominator; }
+
+	void setNumerator(int num) { numerator = num; }
+	void setDenominator(int denom) { denominator = denom; }
+
+private:
+	int numerator;
+	int denominator;
 };
