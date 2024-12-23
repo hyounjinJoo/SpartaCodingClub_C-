@@ -27,7 +27,7 @@ FORCEINLINE void ClearCMDWithDelaySec ( int DelaySecond = 1 )
 	ClearCMD ( );
 }
 
-FORCEINLINE int GetNumberInput ( )
+FORCEINLINE int GetNumberFromInput ( )
 {
 	int Number = InitialIntValue;
 	std::cin >> Number;
@@ -35,9 +35,9 @@ FORCEINLINE int GetNumberInput ( )
 	return Number;
 }
 
-FORCEINLINE void SaveNumberToVector ( const int InNumber , std::vector<int>& OutVector )
+FORCEINLINE void SaveNumberToArray (const int InNumber, int OutArray[] , int InIDX )
 {
-	OutVector.push_back ( InNumber );
+	OutArray[ InIDX ] = InNumber;
 }
 
 FORCEINLINE void Swap ( int& Left , int& Right )
@@ -47,21 +47,21 @@ FORCEINLINE void Swap ( int& Left , int& Right )
 	Right = Temp;
 }
 
-FORCEINLINE long CalcSumInArray ( const std::vector<int>& InVector )
+FORCEINLINE long CalcSumInArray ( const int InArray[], const int ArraySize )
 {
 	long Value = 0;
-	for ( int Number : InVector )
+	for (int IDX = 0; IDX < ArraySize; ++IDX)
 	{
-		Value += Number;
+		Value += InArray[IDX];
 	}
 
 	return Value;
 }
 
-FORCEINLINE double CalcAverageInArray ( const std::vector<int>& InVector )
+FORCEINLINE double CalcAverageInArray ( const int InArray[], const int ArraySize )
 {
-	double Value = static_cast< double >( CalcSumInArray ( InVector ) );
-	Value /= static_cast< float >( InVector.size ( ) );
+	double Value = static_cast< double >( CalcSumInArray ( InArray, ArraySize ) );
+	Value /= static_cast< float >( ArraySize );
 
 	return Value;
 }
@@ -83,12 +83,12 @@ FORCEINLINE void PrintENDLs ( int NumberOfENDL = 1 )
 	}
 }
 
-FORCEINLINE void PrintArray ( const std::vector<int>& InVector )
+FORCEINLINE void PrintArray ( const int InArray[] , const int InArraySize)
 {
 	std::cout << "배열 : ";
-	for ( int Number : InVector )
+	for (int IDX = 0; IDX < InArraySize; ++IDX)
 	{
-		std::cout << Number << " ";
+		std::cout << InArray[IDX] << " ";
 	}
 	std::cout << "\n";
 }
@@ -108,7 +108,7 @@ FORCEINLINE void DecideInsertionSortOffset ( int& Left , int& Right , const int 
 	}
 }
 
-FORCEINLINE void InsertionSort ( std::vector<int>& OutVector , const int InOrderingType = ASCENDING )
+FORCEINLINE void InsertionSort ( int OutArray[] , int ArraySize, const int InOrderingType = ASCENDING )
 {
 	int LeftOffset , RightOffset;
 	LeftOffset = RightOffset = 0;
@@ -116,16 +116,15 @@ FORCEINLINE void InsertionSort ( std::vector<int>& OutVector , const int InOrder
 
 	int KeyValue = 0;
 	bool bNeedSwap = false;
-	int CountOfNumbersInArray = static_cast< int >( OutVector.size ( ) );
-	for ( int IDX = 1; IDX < CountOfNumbersInArray; ++IDX )
+	for ( int IDX = 1; IDX < ArraySize; ++IDX )
 	{
-		KeyValue = OutVector[ IDX ];
+		KeyValue = OutArray[ IDX ];
 		for ( int CompareIDX = IDX - 1; CompareIDX >= 0; --CompareIDX )
 		{
-			int& LeftNumber = OutVector[ CompareIDX + LeftOffset ];
-			int& RightNumber = OutVector[ CompareIDX + RightOffset ];
+			int& LeftNumber = OutArray[ CompareIDX + LeftOffset ];
+			int& RightNumber = OutArray[ CompareIDX + RightOffset ];
 
-			int& ComparedValue = OutVector[ CompareIDX ];
+			int& ComparedValue = OutArray[ CompareIDX ];
 			bNeedSwap = false;
 			if ( ASCENDING == InOrderingType )
 			{
