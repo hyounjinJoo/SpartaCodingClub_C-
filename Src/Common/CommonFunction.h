@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 #include <vector>
 
@@ -9,25 +9,25 @@ constexpr int ASCENDING = 1;
 constexpr int DESCENDING = 2;
 
 
-FORCEINLINE void ClearCMD()
+FORCEINLINE void ClearCMD ( )
 {
-	system("cls");
+	system ( "cls" );
 }
 
-FORCEINLINE void ClearCMDWithDelaySec(int DelaySecond = 1)
+FORCEINLINE void ClearCMDWithDelaySec ( int DelaySecond = 1 )
 {
 	int SleepLimits = DelaySecond * 10;
 
-	for (int Iter = 0; Iter < SleepLimits; ++Iter)
+	for ( int Iter = 0; Iter < SleepLimits; ++Iter )
 	{
-		Sleep(100);
+		Sleep ( 100 );
 		std::cout << ".";
 	}
 
-	ClearCMD();
+	ClearCMD ( );
 }
 
-FORCEINLINE int GetNumberInput()
+FORCEINLINE int GetNumberInput ( )
 {
 	int Number = InitialIntValue;
 	std::cin >> Number;
@@ -35,22 +35,22 @@ FORCEINLINE int GetNumberInput()
 	return Number;
 }
 
-FORCEINLINE void SaveNumberToVector(const int InNumber, std::vector<int>& OutVector)
+FORCEINLINE void SaveNumberToVector ( const int InNumber , std::vector<int>& OutVector )
 {
-	OutVector.push_back(InNumber);
+	OutVector.push_back ( InNumber );
 }
 
-FORCEINLINE void Swap(int& Left, int& Right)
+FORCEINLINE void Swap ( int& Left , int& Right )
 {
 	int Temp = Left;
 	Left = Right;
 	Right = Temp;
 }
 
-FORCEINLINE long CalcSumInArray(const std::vector<int>& InVector)
+FORCEINLINE long CalcSumInArray ( const std::vector<int>& InVector )
 {
 	long Value = 0;
-	for (int Number : InVector)
+	for ( int Number : InVector )
 	{
 		Value += Number;
 	}
@@ -58,44 +58,44 @@ FORCEINLINE long CalcSumInArray(const std::vector<int>& InVector)
 	return Value;
 }
 
-FORCEINLINE double CalcAverageInArray(const std::vector<int>& InVector)
+FORCEINLINE double CalcAverageInArray ( const std::vector<int>& InVector )
 {
-	double Value = static_cast<double>(CalcSumInArray(InVector));
-	Value /= static_cast<float>(InVector.size());
+	double Value = static_cast< double >( CalcSumInArray ( InVector ) );
+	Value /= static_cast< float >( InVector.size ( ) );
 
 	return Value;
 }
 
-FORCEINLINE void Print(const std::string& InString, bool bUsingEndOfLine = true)
+FORCEINLINE void Print ( const std::string& InString , bool bUsingEndOfLine = true )
 {
 	std::cout << InString;
-	if (bUsingEndOfLine)
+	if ( bUsingEndOfLine )
 	{
 		std::cout << "\n";
 	}
 }
 
-FORCEINLINE void PrintENDLs(int NumberOfENDL = 1)
+FORCEINLINE void PrintENDLs ( int NumberOfENDL = 1 )
 {
-	for (int Iter = 0; Iter < NumberOfENDL; ++Iter)
+	for ( int Iter = 0; Iter < NumberOfENDL; ++Iter )
 	{
 		std::cout << "\n";
 	}
 }
 
-FORCEINLINE void PrintArray(const std::vector<int>& InVector)
+FORCEINLINE void PrintArray ( const std::vector<int>& InVector )
 {
-	std::cout << "�迭 : ";
-	for (int Number : InVector)
+	std::cout << "배열 : ";
+	for ( int Number : InVector )
 	{
 		std::cout << Number << " ";
 	}
 	std::cout << "\n";
 }
 
-FORCEINLINE void DecideInsertionSortOffset(int& Left, int& Right, const int InOrderingType)
+FORCEINLINE void DecideInsertionSortOffset ( int& Left , int& Right , const int InOrderingType )
 {
-	switch (InOrderingType)
+	switch ( InOrderingType )
 	{
 	case ASCENDING:
 		++Right;
@@ -108,37 +108,37 @@ FORCEINLINE void DecideInsertionSortOffset(int& Left, int& Right, const int InOr
 	}
 }
 
-FORCEINLINE void InsertionSort(std::vector<int>& OutVector, const int InOrderingType = ASCENDING)
+FORCEINLINE void InsertionSort ( std::vector<int>& OutVector , const int InOrderingType = ASCENDING )
 {
-	int LeftOffset, RightOffset;
+	int LeftOffset , RightOffset;
 	LeftOffset = RightOffset = 0;
-	DecideInsertionSortOffset(LeftOffset, RightOffset, InOrderingType);
+	DecideInsertionSortOffset ( LeftOffset , RightOffset , InOrderingType );
 
 	int KeyValue = 0;
 	bool bNeedSwap = false;
-	int CountOfNumbersInArray = static_cast<int>(OutVector.size());
-	for (int IDX = 1; IDX < CountOfNumbersInArray; ++IDX)
+	int CountOfNumbersInArray = static_cast< int >( OutVector.size ( ) );
+	for ( int IDX = 1; IDX < CountOfNumbersInArray; ++IDX )
 	{
-		KeyValue = OutVector[IDX];
-		for (int CompareIDX = IDX - 1; CompareIDX >= 0; --CompareIDX)
+		KeyValue = OutVector[ IDX ];
+		for ( int CompareIDX = IDX - 1; CompareIDX >= 0; --CompareIDX )
 		{
-			int& LeftNumber = OutVector[CompareIDX + LeftOffset];
-			int& RightNumber = OutVector[CompareIDX + RightOffset];
+			int& LeftNumber = OutVector[ CompareIDX + LeftOffset ];
+			int& RightNumber = OutVector[ CompareIDX + RightOffset ];
 
-			int& ComparedValue = OutVector[CompareIDX];
+			int& ComparedValue = OutVector[ CompareIDX ];
 			bNeedSwap = false;
-			if (ASCENDING == InOrderingType)
+			if ( ASCENDING == InOrderingType )
 			{
-				if (ComparedValue <= KeyValue)
+				if ( ComparedValue <= KeyValue )
 				{
 					break;
 				}
 
 				bNeedSwap = true;
 			}
-			else if (DESCENDING == InOrderingType)
+			else if ( DESCENDING == InOrderingType )
 			{
-				if (ComparedValue >= KeyValue)
+				if ( ComparedValue >= KeyValue )
 				{
 					break;
 				}
@@ -146,7 +146,7 @@ FORCEINLINE void InsertionSort(std::vector<int>& OutVector, const int InOrdering
 				bNeedSwap = true;
 			}
 
-			Swap(LeftNumber, RightNumber);
+			Swap ( LeftNumber , RightNumber );
 		}
 	}
 }

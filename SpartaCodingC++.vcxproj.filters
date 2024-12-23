@@ -29,9 +29,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include=".editorconfig" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Src\HW_01_SimpleProgramming\HW_01_SimpleProgramming.h">
       <Filter>Header Files</Filter>
     </ClInclude>
