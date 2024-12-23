@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Src\Lecture\Chapter2-1\Chapter2_1.cpp" />
     <ClCompile Include="Src\Lecture\Chapter1-3\Chapter1_3HW.cpp" />
     <ClCompile Include="Src\Lecture\Chapter1-2\Chapter1_2HW.cpp" />
     <ClCompile Include="Src\HW_01_SimpleProgramming\HW_01_SimpleProgramming.cpp" />
@@ -134,6 +135,7 @@
     <ClCompile Include="Src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Src\Lecture\Chapter2-1\Chapter2_1.h" />
     <ClInclude Include="Src\Lecture\Chapter1-3\Chapter1_3HW.h" />
     <ClInclude Include="Src\Lecture\Chapter1-2\Chapter1_2HW.h" />
     <ClInclude Include="Src\Common\CommonFunction.h" />
