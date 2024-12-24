@@ -1,4 +1,4 @@
-﻿#include "../../Common/CommonFunction.h"
+﻿#include "CommonFunction.h"
 
 #include "Chapter1_2HW.h"
 

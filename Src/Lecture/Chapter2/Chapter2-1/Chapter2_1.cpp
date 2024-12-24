@@ -1,5 +1,5 @@
 ﻿#include "Chapter2_1.h"
-#include "../../Common/CommonFunction.h"
+#include "CommonFunction.h"
 
 
 int Chapter2_1HWMain() {

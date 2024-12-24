@@ -1,6 +1,6 @@
 ﻿#include "Chapter1_3HW.h"
 
-#include "../../Common/CommonFunction.h"
+#include "CommonFunction.h"
 
 int Chapter1_3HWMain()
 {

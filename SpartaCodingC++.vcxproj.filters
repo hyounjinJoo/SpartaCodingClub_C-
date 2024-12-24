@@ -27,19 +27,19 @@
     <ClCompile Include="Src\HW_01_SimpleProgramming\HW_01_SimpleProgramming.cpp">
       <Filter>Source Files\Day6</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Lecture\Chapter1-1\Chapter1-1HW.cpp">
+    <ClCompile Include="Src\Lecture\Chapter1\Chapter1-1\Chapter1_1HW.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Lecture\Chapter1-2\Chapter1_2HW.cpp">
+    <ClCompile Include="Src\Lecture\Chapter1\Chapter1-2\Chapter1_2HW.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Lecture\Chapter1-3\Chapter1_3HW.cpp">
+    <ClCompile Include="Src\Lecture\Chapter1\Chapter1-3\Chapter1_3HW.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Lecture\Chapter2-1\Chapter2_1.cpp">
+    <ClCompile Include="Src\Lecture\Chapter2\Chapter2-1\Chapter2_1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Lecture\Chapter2-2\Chapter2_2.cpp">
+    <ClCompile Include="Src\Lecture\Chapter2\Chapter2-2\Chapter2_2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,19 +50,19 @@
     <ClInclude Include="Src\Common\CommonFunction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Lecture\Chapter1-1\Chapter1-1HW.h">
+    <ClInclude Include="Src\Lecture\Chapter1\Chapter1-1\Chapter1_1HW.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Lecture\Chapter1-2\Chapter1_2HW.h">
+    <ClInclude Include="Src\Lecture\Chapter1\Chapter1-2\Chapter1_2HW.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Lecture\Chapter1-3\Chapter1_3HW.h">
+    <ClInclude Include="Src\Lecture\Chapter1\Chapter1-3\Chapter1_3HW.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Lecture\Chapter2-1\Chapter2_1.h">
+    <ClInclude Include="Src\Lecture\Chapter2\Chapter2-1\Chapter2_1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Lecture\Chapter2-2\Chapter2_2.h">
+    <ClInclude Include="Src\Lecture\Chapter2\Chapter2-2\Chapter2_2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
