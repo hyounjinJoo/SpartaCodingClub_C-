@@ -1,7 +1,14 @@
 ﻿#pragma once
-#include <iostream>
-#include <vector>
+// System
 #include <windows.h>
+
+// Stream
+#include <iostream>
+
+// Structure
+#include <vector>
+#include <map>
+#include <string>
 
 constexpr int InitialIntValue = INT_MIN;
 constexpr bool SUCCESS = true;
@@ -10,7 +17,6 @@ constexpr int ASCENDING = 1;
 constexpr int DESCENDING = 2;
 constexpr int CONTINUE = 1;
 constexpr int EXIT = 0;
-
 
 FORCEINLINE void ClearCMD ( )
 {
@@ -69,21 +75,19 @@ FORCEINLINE double CalcAverageInArray ( const int InArray[], const int ArraySize
 	return Value;
 }
 
-FORCEINLINE void Print ( const std::string& InString , bool bUsingEndOfLine = true )
-{
-	std::cout << InString;
-	if ( bUsingEndOfLine )
-	{
-		std::cout << "\n";
-	}
-}
-
 FORCEINLINE void PrintENDLs ( int NumberOfENDL = 1 )
 {
 	for ( int Iter = 0; Iter < NumberOfENDL; ++Iter )
 	{
 		std::cout << "\n";
 	}
+}
+
+template <typename T>
+FORCEINLINE void Print(const T& InInput, int CountOfENDLs = 1)
+{
+	std::cout << InInput;
+	PrintENDLs(CountOfENDLs);
 }
 
 FORCEINLINE void PrintArray ( const int InArray[] , const int InArraySize)
