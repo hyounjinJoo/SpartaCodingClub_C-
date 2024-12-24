@@ -129,6 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Src\Lecture\Chapter2\Chapter2-3\Chapter2_3.cpp" />
     <ClCompile Include="Src\Lecture\Chapter2\Chapter2-2\Chapter2_2.cpp" />
     <ClCompile Include="Src\Lecture\Chapter2\Chapter2-1\Chapter2_1.cpp" />
     <ClCompile Include="Src\Lecture\Chapter1\Chapter1-3\Chapter1_3HW.cpp" />
@@ -138,6 +139,7 @@
     <ClCompile Include="Src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Src\Lecture\Chapter2\Chapter2-3\Chapter2_3.h" />
     <ClInclude Include="Src\Lecture\Chapter2\Chapter2-2\Chapter2_2.h" />
     <ClInclude Include="Src\Lecture\Chapter2\Chapter2-1\Chapter2_1.h" />
     <ClInclude Include="Src\Lecture\Chapter1\Chapter1-3\Chapter1_3HW.h" />
