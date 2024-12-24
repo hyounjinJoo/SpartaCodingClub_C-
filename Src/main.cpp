@@ -11,6 +11,7 @@
 #include "Chapter2-1/Chapter2_1.h"
 #include "Chapter2-2/Chapter2_2.h"
 #include "Chapter2-3/Chapter2_3.h"
+#include "Chapter2-4/Chapter2_4.h"
 
 int main()
 {
@@ -21,7 +22,9 @@ int main()
 	//Result = Chapter1_3HWMain();
 	//Result = Chapter2_1HWMain();
 	//Result = Chapter2_2HWMain();
-	Result = Chapter2_3HWMain();
+	//Result = Chapter2_3HWMain();
+	//Result = Chapter2_4_1HWMain();
+	Result = Chapter2_4_2HWMain();
 
 	_CrtDumpMemoryLeaks();
 	return Result;
