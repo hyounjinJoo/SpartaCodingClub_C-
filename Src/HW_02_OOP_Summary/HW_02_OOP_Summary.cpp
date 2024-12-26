@@ -26,32 +26,27 @@ Zoo::~Zoo()
 			delete animals[IDX];
 		}
 	}
-
-	delete[] animals;
 }
 
 void Zoo::addAnimal(Animal* animal)
 {
-	// 마지막 인덱스에 동물을 추가한다.
-	animals[NextAddIDX++] = animal;
-
-	if (NextAddIDX >= animalCount)
+	if (animalCount >= 10)
 	{
-		Animal** NewAnimalArray = new Animal * [animalCount *= 2]();
-		for (int IDX = 0; IDX <= NextAddIDX; ++IDX)
-		{
-			NewAnimalArray[IDX] = animals[IDX];
-		}
+		Print("[오류] : 동물원에 이미 동물이 많네요!");
+		delete animal;
+		Print("[알림] : 새로운 동물은...어음...아무튼 좋은 곳으로 갔습니다.");
 
-		delete[] animals;
-
-		animals = NewAnimalArray;
+		return;
 	}
+
+	animals[animalCount++] = animal;
+	Print("[알림] : 새로운 동물이 동물원에 왔어요! 현재 동물원의 동물 수 : " + std::to_string(animalCount));
 }
 
 void Zoo::performActions()
 {
-	for(int IDX = 0; IDX < NextAddIDX; ++IDX)
+	Print("[알림] : 동물들이 웁니다~");
+	for(int IDX = 0; IDX < animalCount; ++IDX)
 	{
 		animals[IDX]->makeSound();
 	}
@@ -82,8 +77,16 @@ Animal* Main::createRandomAnimal()
 
 int Main::HW_02_OOPSummaryMain()
 {
-	std::unique_ptr<Zoo> zoo = std::make_unique<Zoo>(4);
+	std::unique_ptr<Zoo> zoo = std::make_unique<Zoo>();
 
+	zoo->addAnimal(createRandomAnimal());
+	zoo->addAnimal(createRandomAnimal());
+	zoo->addAnimal(createRandomAnimal());
+	zoo->addAnimal(createRandomAnimal());
+	zoo->addAnimal(createRandomAnimal());
+	zoo->addAnimal(createRandomAnimal());
+	zoo->addAnimal(createRandomAnimal());
+	zoo->addAnimal(createRandomAnimal());
 	zoo->addAnimal(createRandomAnimal());
 	zoo->addAnimal(createRandomAnimal());
 	zoo->addAnimal(createRandomAnimal());

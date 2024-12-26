@@ -35,7 +35,7 @@ public:
 class Zoo
 {
 public:
-	Zoo(int Size) : animalCount(Size) { animals = new Animal *[Size](); }
+	Zoo() : animalCount(0) {}
 	~Zoo();
 
 public:
@@ -43,9 +43,8 @@ public:
 	void performActions();
 
 private:
-	Animal** animals;
+	Animal* animals[10];
 	int animalCount;
-	int NextAddIDX = 0;
 };
 
 class Main
