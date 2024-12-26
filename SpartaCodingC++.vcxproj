@@ -129,6 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Src\HW_02_OOP_Summary\HW_02_OOP_Summary.cpp" />
     <ClCompile Include="Src\Lecture\Chapter3\Chapter3-1\Chapter3_1.cpp" />
     <ClCompile Include="Src\Lecture\Chapter2\Chapter2-4\Chapter2_4.cpp" />
     <ClCompile Include="Src\Lecture\Chapter2\Chapter2-3\Chapter2_3.cpp" />
@@ -141,6 +142,7 @@
     <ClCompile Include="Src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Src\HW_02_OOP_Summary\HW_02_OOP_Summary.h" />
     <ClInclude Include="Src\Lecture\Chapter3\Chapter3-1\Chapter3_1.h" />
     <ClInclude Include="Src\Lecture\Chapter2\Chapter2-4\Chapter2_4.h" />
     <ClInclude Include="Src\Lecture\Chapter2\Chapter2-3\Chapter2_3.h" />
