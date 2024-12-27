@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)\Src\Common;$(ProjectDir)\Src\Lecture\;$(ProjectDir)\Src\Lecture\Chapter3;$(ProjectDir)\Src\Lecture\Chapter2;$(ProjectDir)\Src\Lecture\Chapter1</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Src\Common;$(ProjectDir)\Src\Lecture\;$(ProjectDir)\Src\Lecture\Chapter3;$(ProjectDir)\Src\Lecture\Chapter2;$(ProjectDir)\Src\Lecture\Chapter1;$(ProjectDir)\Src\HomeWork\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -119,7 +119,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)\Src\Common;$(ProjectDir)\Src\Lecture\;$(ProjectDir)\Src\Lecture\Chapter3;$(ProjectDir)\Src\Lecture\Chapter2;$(ProjectDir)\Src\Lecture\Chapter1</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Src\Common;$(ProjectDir)\Src\Lecture\;$(ProjectDir)\Src\Lecture\Chapter3;$(ProjectDir)\Src\Lecture\Chapter2;$(ProjectDir)\Src\Lecture\Chapter1;$(ProjectDir)\Src\HomeWork\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,7 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Src\HW_02_OOP_Summary\HW_02_OOP_Summary.cpp" />
+    <ClCompile Include="Src\HomeWork\HW_02_OOP_Summary\HW_02_OOP_Summary.cpp" />
     <ClCompile Include="Src\Lecture\Chapter3\Chapter3-1\Chapter3_1.cpp" />
     <ClCompile Include="Src\Lecture\Chapter2\Chapter2-4\Chapter2_4.cpp" />
     <ClCompile Include="Src\Lecture\Chapter2\Chapter2-3\Chapter2_3.cpp" />
@@ -137,12 +137,12 @@
     <ClCompile Include="Src\Lecture\Chapter2\Chapter2-1\Chapter2_1.cpp" />
     <ClCompile Include="Src\Lecture\Chapter1\Chapter1-3\Chapter1_3HW.cpp" />
     <ClCompile Include="Src\Lecture\Chapter1\Chapter1-2\Chapter1_2HW.cpp" />
-    <ClCompile Include="Src\HW_01_SimpleProgramming\HW_01_SimpleProgramming.cpp" />
+    <ClCompile Include="Src\HomeWork\HW_01_SimpleProgramming\HW_01_SimpleProgramming.cpp" />
     <ClCompile Include="Src\Lecture\Chapter1\Chapter1-1\Chapter1_1HW.cpp" />
     <ClCompile Include="Src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Src\HW_02_OOP_Summary\HW_02_OOP_Summary.h" />
+    <ClInclude Include="Src\HomeWork\HW_02_OOP_Summary\HW_02_OOP_Summary.h" />
     <ClInclude Include="Src\Lecture\Chapter3\Chapter3-1\Chapter3_1.h" />
     <ClInclude Include="Src\Lecture\Chapter2\Chapter2-4\Chapter2_4.h" />
     <ClInclude Include="Src\Lecture\Chapter2\Chapter2-3\Chapter2_3.h" />
@@ -151,7 +151,7 @@
     <ClInclude Include="Src\Lecture\Chapter1\Chapter1-3\Chapter1_3HW.h" />
     <ClInclude Include="Src\Lecture\Chapter1\Chapter1-2\Chapter1_2HW.h" />
     <ClInclude Include="Src\Common\CommonFunction.h" />
-    <ClInclude Include="Src\HW_01_SimpleProgramming\HW_01_SimpleProgramming.h" />
+    <ClInclude Include="Src\HomeWork\HW_01_SimpleProgramming\HW_01_SimpleProgramming.h" />
     <ClInclude Include="Src\Lecture\Chapter1\Chapter1-1\Chapter1_1HW.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
